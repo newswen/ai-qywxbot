@@ -1,0 +1,16 @@
+{
+  "mcpServers": {
+    "filesystem": {
+      "command": "D:\\mcp\\test\\1.bat",
+      "args": []
+    }
+  },
+  "mcp-server-computer": {
+    "command": "java",
+    "args": [
+      "-Dspring.ai.mcp.server.stdio=true",
+      "-jar",
+      "D:\\xfg\\MavenRepository\\com\\yw\\mcp-weather\\1.0.0\\mcp-weather-1.0.0.jar"
+    ]
+  }
+}

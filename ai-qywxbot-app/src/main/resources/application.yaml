@@ -1,0 +1,25 @@
+spring:
+  application:
+    name: ai-qywxbot-app
+  ai:
+    openai:
+      api-key: sk-x1xAGsbbRGyuUYzs1y1jS62maS0tD2CHsQrkSGVcf1RpP0KI
+      base-url: https://api.hunyuan.cloud.tencent.com
+      chat:
+        options:
+          model: hunyuan-turbos-latest
+          temperature: 0.7
+          max-tokens: 1024
+    mcp:
+      client:
+        request-timeout: 360s
+        stdio:
+          servers-configuration: classpath:/config/mcp-servers-config.json
+#        sse:
+#          connections:
+#             mcp-weather:
+#              url: http://127.0.0.1:2021
+#            mcp-server-csdn:
+#              url: http://127.0.0.1:8101
+#            mcp-server-weixin:
+#              url: http://127.0.0.1:8102
