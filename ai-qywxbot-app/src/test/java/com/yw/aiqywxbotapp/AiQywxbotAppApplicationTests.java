@@ -18,7 +18,7 @@ class AiQywxbotAppApplicationTests {
 
     @Test
     void contextLoads() {
-        String prompt = "天气预报";
+        String prompt = "查询宁波天气";
         log.info(chatClient.prompt(prompt).call().content());
     }
 
