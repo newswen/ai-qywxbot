@@ -1,5 +1,6 @@
 package com.yw.aiqywxbotapp;
 
+import com.yw.aiqywxbotapp.schedulding.UsTwoBotScheduler;
 import jakarta.annotation.Resource;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.Test;
@@ -16,9 +17,12 @@ class AiQywxbotAppApplicationTests {
     @Resource
     private ChatClient chatClient;
 
+    @Resource
+    private UsTwoBotScheduler usTwoBotScheduler;
+
     @Test
     void contextLoads() {
-        String prompt = "查询宁波天气";
+        String prompt = "查询宁波天气预报";
         log.info(chatClient.prompt(prompt).call().content());
     }
 
@@ -39,6 +43,11 @@ class AiQywxbotAppApplicationTests {
 
         System.out.println("\n>>> QUESTION: " + userInput);
         System.out.println("\n>>> ASSISTANT: " + chatClient.prompt(userInput).call().content());
+    }
+
+    @Test
+    public void test_send_message() {
+        usTwoBotScheduler.sendTestMessage();
     }
 
 

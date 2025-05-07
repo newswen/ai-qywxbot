@@ -1,7 +1,9 @@
 package com.yw.aiqywxbotapp.config;
 
+import com.alibaba.fastjson.JSON;
 import io.micrometer.observation.ObservationRegistry;
 import io.modelcontextprotocol.client.McpSyncClient;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.ai.chat.client.ChatClient;
 import org.springframework.ai.chat.client.DefaultChatClientBuilder;
 import org.springframework.ai.chat.client.advisor.PromptChatMemoryAdvisor;
@@ -18,6 +20,7 @@ import org.springframework.context.annotation.Configuration;
 import java.util.*;
 
 @Configuration
+@Slf4j
 public class OpenAIConfig {
 
 //    /**
@@ -63,12 +66,13 @@ public class OpenAIConfig {
 //        DefaultChatClientBuilder defaultChatClientBuilder = new DefaultChatClientBuilder(openAiChatModel, ObservationRegistry.NOOP, (ChatClientObservationConvention) null);
 //        return defaultChatClientBuilder
 //                .defaultTools(syncMcpToolCallbackProvider)
-////       chat:
-////        options:
-////          model: gpt-4.1 yml配置方式可以注释掉这里的代码。
-////                .defaultOptions(OpenAiChatOptions.builder()
-////                        .model("gpt-4.1")
-////                        .build())
+
+    /// /       chat:
+    /// /        options:
+    /// /          model: gpt-4.1 yml配置方式可以注释掉这里的代码。
+    /// /                .defaultOptions(OpenAiChatOptions.builder()
+    /// /                        .model("gpt-4.1")
+    /// /                        .build())
 //                .defaultAdvisors(new PromptChatMemoryAdvisor(chatMemory))
 //                .build();
 //    }
@@ -82,9 +86,8 @@ public class OpenAIConfig {
 //    public ChatMemory chatMemory() {
 //        return new InMemoryChatMemory();
 //    }
-
     @Bean
-    public ChatClient chatClient(ChatClient.Builder chatClientBuilder) {
-        return chatClientBuilder.build();
+    public ChatClient chatClient(ChatClient.Builder chatClientBuilder, ToolCallbackProvider tools) {
+        return chatClientBuilder.defaultTools(tools).build();
     }
 }

@@ -1,2 +1,2 @@
 @echo off
-npx -y @modelcontextprotocol/server-filesystem D:\mcp\test D:\mcp\test
+npx -y @modelcontextprotocol/server-filesystem C:\Users\Administrator\Desktop\ai C:\Users\Administrator\Desktop\ai

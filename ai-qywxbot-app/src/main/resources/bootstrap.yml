@@ -1,0 +1,7 @@
+server:
+  port: 1104
+spring:
+  application:
+    name: ai-qywxbot
+  profiles:
+    active: dev

@@ -1,15 +1,11 @@
 {
   "mcpServers": {
-    "filesystem": {
-      "command": "D:\\mcp\\ai-qywxbot\\docs\\windows\\1.bat",
-      "args": []
-    },
     "mcp-server-computer": {
       "command": "java",
       "args": [
-        "-Dspring.ai.mcp.server.stdio=true",
+        "-Dfile.encoding=UTF-8",
         "-jar",
-        "D:\\xfg\\MavenRepository\\com\\yw\\mcp-weather\\1.0.0\\mcp-weather-1.0.0.jar"
+        "D:\\xfg\\respository\\com\\yw\\mcp-weather\\1.0.0\\mcp-weather-1.0.0.jar"
       ]
     }
   }
