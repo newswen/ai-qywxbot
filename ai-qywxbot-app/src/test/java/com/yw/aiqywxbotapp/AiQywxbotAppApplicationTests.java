@@ -3,15 +3,14 @@ package com.yw.aiqywxbotapp;
 import com.yw.aiqywxbotapp.schedulding.UsTwoBotScheduler;
 import jakarta.annotation.Resource;
 import lombok.extern.slf4j.Slf4j;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.springframework.ai.chat.client.ChatClient;
-import org.springframework.ai.openai.OpenAiChatOptions;
-import org.springframework.ai.tool.ToolCallbackProvider;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
 @Slf4j
+@Disabled("仅用于手动测试，不参与自动化构建")
 class AiQywxbotAppApplicationTests {
 
     @Resource
