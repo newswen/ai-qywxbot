@@ -40,13 +40,13 @@ public class UsTwoBotScheduler {
     private final String dailyReminderPrompt = "\uD83D\uDD0D 1. 查询天气：\n" +
             "- 获取 河南南阳唐河 和 浙江宁波江北 的最新天气信息。\n" +
             "\uD83C\uDF08 2. 格式化输出：\n" +
-            "\uD83C\uDF08唐河县未来三天天气预报\uD83C\uDF08\n" +
+            "\uD83C\uDF08唐河县天气预报\uD83C\uDF08\n" +
             " \uD83D\uDDD3今日【{日期}】\n" +
             " \uD83C\uDF24天气：{唐河天气}\n" +
             " \uD83C\uDF21温度：{唐河温度}\n" +
             " \uD83C\uDF00风力：{唐河风力}\n" +
             "---------------------------------------\n" +
-            "\uD83C\uDF08江北区未来三天天气预报\uD83C\uDF08\n" +
+            "\uD83C\uDF08宁波江北区天气预报\uD83C\uDF08\n" +
             " \uD83D\uDDD3今日【{日期}】\n" +
             " \uD83C\uDF24天气：{江北天气}\n" +
             " \uD83C\uDF21温度：{江北温度}\n" +
@@ -56,13 +56,13 @@ public class UsTwoBotScheduler {
             "\n" +
             "---\n" +
             "✨ 3. 示例输出：\n" +
-            "\uD83C\uDF08唐河县未来三天天气预报\uD83C\uDF08\n" +
+            "\uD83C\uDF08唐河县天气预报\uD83C\uDF08\n" +
             " \uD83D\uDDD3今日【2025-05-07】\n" +
             " \uD83C\uDF24天气：小雨 / 阴\n" +
             " \uD83C\uDF21温度：16°C ~ 31°C\n" +
             " \uD83C\uDF00风力：南风1-3级\n" +
             "---------------------------------------\n" +
-            "\uD83C\uDF08江北区未来三天天气预报\uD83C\uDF08\n" +
+            "\uD83C\uDF08宁波江北区天气预报\uD83C\uDF08\n" +
             " \uD83D\uDDD3今日【2025-05-07】\n" +
             " \uD83C\uDF24天气：多云 / 多云\n" +
             " \uD83C\uDF21温度：18°C ~ 25°C\n" +
@@ -73,8 +73,10 @@ public class UsTwoBotScheduler {
             "---\n" +
             "\uD83C\uDF1F 5. 特殊注意：\n" +
             "- 输出必须整齐、可爱，符合聊天窗口的美观格式。\n" +
+            "- 严格按照模板输出\n" +
             "\uD83C\uDF89 6. 新增幽默元素：\n" +
-            "- 查询得出的每日搞笑段子应当结合当前流行的网络用语、表情符号和幽默的时事背景，让用户在获取天气预报的同时感到放松。";
+            "- 查询得出的每日搞笑段子应当结合当前流行的网络用语、表情符号和幽默的时事背景，让用户在获取天气预报的同时感到放松。在保证模板输出的同时，这个也很重要。";
+
     @Scheduled(cron = "0 0 7 * * ?")
     public void sendTestMessage() {
         if (usTwoEnable) {
