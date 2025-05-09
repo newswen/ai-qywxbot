@@ -5,7 +5,7 @@
       "args": [
         "-Dfile.encoding=UTF-8",
         "-jar",
-        "D:\\xfg\\MavenRepository\\com\\yw\\mcp-weather\\1.0.0\\mcp-weather-1.0.0.jar"
+        "D:\\mcp\\mpc-weather\\target\\mcp-weather-1.0.0.jar"
       ]
     }
   }
