@@ -77,7 +77,7 @@ public class UsTwoBotScheduler {
             "\uD83C\uDF89 6. 新增幽默元素：\n" +
             "- 查询得出的每日搞笑段子应当结合当前流行的网络用语、表情符号和幽默的时事背景，让用户在获取天气预报的同时感到放松。在保证模板输出的同时，这个也很重要。";
 
-    @Scheduled(cron = "0 0 7 * * ?")
+    @Scheduled(cron = "0 39 16 * * ?")
     public void sendTestMessage() {
         if (usTwoEnable) {
             sendTextMessage(usTwoHookKey);
