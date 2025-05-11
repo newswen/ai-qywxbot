@@ -5,7 +5,7 @@
       "args": [
         "-Dfile.encoding=UTF-8",
         "-jar",
-        "/docker/mcp/mcp-weather-1.0.0.jar"
+        "mcp-weather-1.0.0.jar"
       ]
     }
   }

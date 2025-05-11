@@ -12,6 +12,7 @@ WORKDIR /app
 
 # 拷贝 jar 包（已构建好的 jar）
 COPY ai-qywxbot-app-1.0.0-SNAPSHOT.jar app.jar
+COPY ./mcp/mcp-weather-1.0.0.jar mcp-weather-1.0.0.jar
 
 # 暴露端口（供参考，对 distroless 没有实际作用，文档性为主）
 EXPOSE 1104
