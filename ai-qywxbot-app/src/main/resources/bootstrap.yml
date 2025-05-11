@@ -3,5 +3,6 @@ server:
 spring:
   application:
     name: ai-qywxbot
+  #找到dev的配置文件，即bootstrap-dev.yml
   profiles:
     active: dev
